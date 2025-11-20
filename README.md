@@ -138,29 +138,12 @@ apartment-hunt/
 - amenities, description
 - first_seen, last_seen, is_active
 
-### Roadmap
+## Images
 
-**Phase 1: Foundation & Data Collection** ✅
-- Zillow scraper for Des Moines
-- SQLite database with deduplication
-- CLI for viewing listings
+<img width="1202" height="566" alt="Screenshot 2025-11-13 214726" src="https://github.com/user-attachments/assets/859d9a14-1721-4dc4-99f9-933ecf5003a2" />
 
-**Phase 2: Scoring Algorithm** ✅ (Current)
-- User preference system (budget, space, work location)
-- Commute calculation using Haversine distance + Nominatim geocoding
-- Multi-factor scoring: commute (40%), price/value (30%), space (20%), location (10%)
-- Ranked output with score breakdown
 
-**Phase 3: Web Interface** (Week 3)
-- Flask/FastAPI web app
-- Dashboard with top matches
-- Click to see details + map
-- Hide/favorite functionality
-
-**Phase 4: Alerts & Polish** (Week 4)
-- Daily email with new top matches
-- Comparison view (side-by-side)
-- Advanced filtering
+<img width="1172" height="883" alt="Screenshot 2025-11-13 214734" src="https://github.com/user-attachments/assets/ed079804-92f3-41e2-8230-ce63838511d2" />
 
 ## Notes
 
