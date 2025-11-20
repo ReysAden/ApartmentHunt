@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.card {
+    border: 2px solid #000;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-family: monospace;
+    background: #fff;
+}
+
+input:focus {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+.button {
+    background: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border: 2px solid #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+}
+
+.spinner {
+    border: 3px solid #ddd;
+    border-top: 3px solid #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
+}
+
+.results-count {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.apartment-card {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.apartment-card:hover {
+    background: #f5f5f5;
+}
+
+.apartment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.apartment-score {
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.apartment-details {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.apartment-address {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.apartment-specs {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.commute-info {
+    background: #f0f0f0;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    font-size: 0.85em;
+}
+
+.score-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin: 15px 0;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.score-item {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.score-label {
+    font-size: 0.7em;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.score-value {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.apartment-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: underline;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.apartment-link:hover {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.error {
+    border: 2px solid #000;
+    background: #fff;
+    padding: 15px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.empty-state-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .apartment-header {
+        flex-direction: column;
+    }
+    
+    .apartment-details {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .apartment-score {
+        align-self: flex-start;
+    }
+}
